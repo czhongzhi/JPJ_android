@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/content_bg"
+    android:orientation="vertical"
+    android:focusableInTouchMode="false" >
+    
+    <!-- 标题 -->
+
+    <include layout="@layout/layout_titlebar"></include>
+
+    <LinearLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:paddingTop="10px"
+            android:weightSum="10"
+            android:scrollbarAlwaysDrawVerticalTrack="false" >
+
+            <TextView
+                android:id="@+id/province_text"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:text="省    份" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/province_spinner"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:layout_height="match_parent" >
+            </Spinner>
+        </LinearLayout>
+
+        <TextView
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:background="@color/divider_font_tint"
+            android:layout_height="0.5dp" />
+
+        <LinearLayout
+            android:id="@+id/tableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:paddingTop="10px"
+            android:weightSum="10"
+            android:scrollbarAlwaysDrawVerticalTrack="false" >
+
+            <TextView
+                android:id="@+id/city_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="8"
+                android:text="城    市" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/city_spinner"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:layout_height="match_parent" >
+            </Spinner>
+        </LinearLayout>
+
+        <TextView
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:background="@color/divider_font_tint"
+            android:layout_height="0.5dp" />
+
+        <LinearLayout
+            android:id="@+id/tableRow3"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:paddingTop="10px"
+            android:weightSum="10"
+            android:scrollbarAlwaysDrawVerticalTrack="false" >
+
+            <TextView
+                android:id="@+id/county_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="8"
+                android:text="县城镇" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/county_spinner"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_weight="2"
+                android:layout_height="match_parent" >
+            </Spinner>
+        </LinearLayout>
+
+        <TextView
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:background="@color/divider_font_tint"
+            android:layout_height="0.5dp" />
+
+        <EditText
+            android:id="@+id/display_edit"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:paddingLeft="10dp"
+            android:enabled="false"
+            android:hint="选择的结果"
+            android:paddingTop="10px" >
+        </EditText>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/set_ok"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_divider_bg_select"
+        android:text="确认"
+        android:textColor="@color/divider_font_mid" />
+
+</LinearLayout>

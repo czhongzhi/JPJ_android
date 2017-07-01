@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.runbo.jpj"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 103
+        versionName "1.0.3"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    signingConfigs {
+        debug {
+            storeFile file("G:\\czz_svn\\runbopoc-debug-key.keystore")
+        }
+    }
+
+    android.applicationVariants.all{
+        variant -> variant.outputs.each {
+            output -> output.outputFile = new File(output.outputFile.parent, "JPJ" + "_v" + defaultConfig.versionName +"_"+buildType.name+ ".apk");
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.0'
+    compile 'com.android.support:design:23.2.0'
+    compile 'in.srain.cube:ultra-ptr:1.0.11'
+    compile files('libs/httpclient-4.5.3.jar')
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:1.0.2'
+
+    compile 'com.android.support:multidex:1.0.1'
+
+
+}

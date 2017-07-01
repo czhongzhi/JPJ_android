@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_titlebar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/content_bg">
+
+
+        <RadioGroup
+            android:id="@+id/set_group_sex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/set_man"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:text="男" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/divider_font_tint" />
+
+            <RadioButton
+                android:id="@+id/set_woman"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:text="女" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/set_ok"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/set_group_sex"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/button_divider_bg_select"
+            android:text="确认"
+            android:textColor="@color/divider_font_mid" />
+
+    </RelativeLayout>
+</LinearLayout>

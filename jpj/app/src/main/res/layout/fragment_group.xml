@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ExpandableListView
+        android:id="@+id/ex_listview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="10sp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="*温馨提示：点击图片展开列表，点击组名则选择该组。"
+        android:textColor="@color/divider_font_red"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

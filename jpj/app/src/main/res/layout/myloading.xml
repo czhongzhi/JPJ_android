@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:orientation="vertical" 
+    >
+	<TextView
+	         android:id="@+id/friendtab_show"
+	         android:layout_width="60dip"
+	         android:layout_height="60dip"
+	         android:layout_centerInParent="true"
+	         android:background="@drawable/myloading_bg"
+	         android:gravity="center"
+	          />
+	<ProgressBar 
+	    android:id="@+id/mProgresBar"
+        android:layout_width="25dip"
+        android:layout_height="25dip"
+        style="?android:attr/progressBarStyle"
+        android:indeterminateDrawable="@drawable/loading"
+        android:layout_centerInParent="true"
+        />
+	
+</RelativeLayout>
